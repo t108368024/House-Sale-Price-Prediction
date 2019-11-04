@@ -36,21 +36,31 @@ from sklearn.preprocessing import *
 2.讀取檔案
 
 data_train = pd.read_csv('train-v3.csv')
+
 x_train = data_train.drop(['price','id'],axis=1).values  
+
 y_train = data_train['price'].values  # read price column
+
 data_valid = pd.read_csv('valid-v3.csv')
+
 x_valid = data_valid.drop(['price','id'],axis=1).values
+
 y_valid = data_valid['price'].values
+
 data_test = pd.read_csv('test-v3.csv')
+
 x_test = data_test.drop('id',axis=1).values
 
 3.數據預處理
 
 x_train = scale(x_train)
+
 x_valid = scale(x_valid)
+
 x_test = scale(x_test)
 
 x_train = preprocessing.scale(x_train)
+
 x_valid = preprocessing.scale(x_valid)
 
 4.訓練模型
@@ -72,6 +82,7 @@ model.fit(x_train,y_train,batch_size=64,epochs=80,validation_data=(x_valid,y_val
 5.儲存
 
 Y_predict = model.predict(x_test)
+
 np.savetxt('test.csv',Y_predict,delimiter=',')
 
 結果分析:
