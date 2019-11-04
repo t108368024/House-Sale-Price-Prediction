@@ -1,11 +1,16 @@
 # House-Sale-Price-Prediction
   房價預測 (回歸模型)
+  
 任務:
 
 • 用train.csv跟valid.csv訓練模型（一行是一筆房屋交易資料的紀錄，包括id, price與21種房屋參數）
+
 • 將test.csv中的每一筆房屋參數，輸入訓練好的模型，預測其房價
+
 • 將預測結果上傳到Kaggle（從“Submit Predictions”連結）
+
 • 看系統幫你算出來的Mean Abslute Error（MAE，就是跟實際房價差多少，取絕對值）分數夠不夠好？
+
 • 嘗試改進預測模型
 
 工作環境:
