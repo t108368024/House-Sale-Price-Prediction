@@ -24,9 +24,13 @@ keras
 1.匯入模組
 
 import pandas as pd
+
 import numpy as np
+
 from keras.models import Sequential
+
 from keras.layers import *
+
 from sklearn.preprocessing import *
 
 2.讀取檔案
